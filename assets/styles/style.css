@@ -1,0 +1,232 @@
+:root {
+    /* Colors */
+        /* Primary */
+        --pale-blue: hsl(225, 100%, 94%);
+        --bright-blue: hsl(245, 75%, 52%);
+        --purple: #766CF1;
+
+        /* Neutral */
+        --very-pale-blue: hsl(225, 100%, 98%);
+        --desaturated-blue: hsl(224, 23%, 55%);
+        --dark-blue: hsl(223, 47%, 23%);
+    
+    /* Typography */
+    --font-family: 'Red Hat Display', sans-serif;
+
+    --font-size: 16px;
+
+    --medium: 500;
+    --bold: 700;
+    --black-font: 900;
+}
+
+
+/* CSS reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+}
+
+img, picture, video, svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Main */
+body {
+    background-image: url("../../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: var(--very-pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 450px;
+}
+
+h1, .description, .shopping-cart, .success {
+    margin: 0 3rem;
+}
+
+
+/* Elements */
+.hero-image {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 45px;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: var(--bold);
+    margin-bottom: 17px;
+}
+
+.description {
+    color: var(--desaturated-blue);
+    font-weight: var(--medium);
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+.shopping-cart {
+    background-color: var(--very-pale-blue);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 24px;
+    margin-bottom: 2rem;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+}
+
+.product-description {
+    margin-left: 20px;
+}
+
+h2 {
+    font-size: var(--font-size);
+    font-weight: var(--black-font);
+    margin-bottom: 6px;
+}
+
+.price {
+    color: var(--desaturated-blue);
+}
+
+.change {
+    color: var(--bright-blue);
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: var(--bold);
+    margin-left: 94px;
+}
+
+.success {
+    background-color: var(--bright-blue);
+    box-shadow: 0px 1rem 30px 0px var(--desaturated-blue);
+    border-radius: 11px;
+    color: white;
+    font-size: 15px;
+    font-weight: var(--black-font);
+    padding: 15px 102px;
+    margin-bottom: 2rem;
+}
+
+.cancel {
+    font-size: 15px;
+    color: var(--desaturated-blue);
+    font-weight: var(--black-font);
+    margin-bottom: 3rem;
+}
+/* Active states */
+.change:hover {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.success:hover {
+    background-color: var(--purple);
+}
+
+.cancel:hover {
+    color: black;
+}
+
+
+/* Mobile version */
+@media (max-width: 375px) {
+    body {
+        background-image: url("../../images/pattern-background-mobile.svg");
+    }
+
+    .card {
+        max-width: 327px;
+    }
+
+    h1, .description{
+        margin: 0 2rem;
+    }
+
+    .shopping-cart, .success {
+        margin: 0 1.5rem;
+    }
+
+    .hero-image {
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 1.375rem;
+        margin-bottom: 16px;
+    }
+
+    .description {
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 24px;
+    }
+
+    .shopping-cart {
+        padding: 17px 1rem 1rem;
+        margin-bottom: 24px;
+    }
+
+    .product-description {
+        margin-left: 20px;
+    }
+
+    h2 {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .change {
+        font-size: 13px;
+        margin-left: 50px;
+    }
+
+    .success {
+        box-shadow: 0px 10px 30px 0px var(--desaturated-blue);
+        font-size: 15px;
+        padding: 15px 64px;
+        margin-bottom: 24px;
+    }
+
+    .cancel {
+        margin-bottom: 32px;
+    }
+}   
